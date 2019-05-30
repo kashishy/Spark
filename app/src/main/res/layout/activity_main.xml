@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/profile_background"
+            android:layout_marginRight="-50dp"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="-100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+            </ImageView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/img_profiledp_id"
+                android:src="@drawable/uploadimage"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Ashish Kumar"
+                android:textSize="20dp"
+                android:layout_below="@id/img_profiledp_id"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txt_name_profile"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KNIT"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:id="@+id/txt_college_profile"
+                android:layout_below="@id/txt_name_profile"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sulatnapur"
+                android:textColor="#FFFFFF"
+                android:layout_below="@id/txt_college_profile"
+                android:textAlignment="center"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tablayout_id"
+            app:tabSelectedTextColor="#2196F3"
+            app:tabIndicatorHeight="4dp"
+            android:background="@drawable/tablayout_background"
+            android:textAlignment="center"
+            app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            app:tabTextColor="#000000">
+        </android.support.design.widget.TabLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foregroundGravity="center"
+                android:id="@+id/viewpager_id">
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
